@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>13DTS | {% block title %}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Suez+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>13DTS Master Website</h1>
+            <h2>{% block pageheading %}{% endblock %}</h2>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/">home</a></li>
+
+            </ul>
+
+        </nav>
+        <div id="main">
+            {% block main %}
+
+            {% endblock %}
+        </div>
+        <footer>
+            <p>&copy; Enter your name here</p>
+        </footer>
+    </div>
+</body>
+</html>

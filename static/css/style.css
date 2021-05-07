@@ -1,0 +1,30 @@
+* {
+    font-family: Comfortaa, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    grid-area: header;
+    background-color: #064c35;
+    color: #a4f8dc;
+    padding: 1rem;
+}
+
+nav {
+    grid-area: nav;
+}
+
+#main {
+    grid-area: main;
+    padding: 1rem;
+    background-color: #edd;
+}
+
+footer {
+    grid-area: footer;
+    padding: 1rem;
+    background-color: #064c35;
+    color: #a4f8dc;
+}
