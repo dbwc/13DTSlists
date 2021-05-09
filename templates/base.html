@@ -16,8 +16,13 @@
         <nav>
             <ul>
                 <li><a href="/">home</a></li>
-
             </ul>
+
+            {% for class in classes %}
+            <li>
+                <a href="/class/{{ class[0] }}">{{ class[1] }}</a>
+            </li>
+            {% endfor %}
 
         </nav>
         <div id="main">

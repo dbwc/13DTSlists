@@ -5,5 +5,18 @@
 {% block pageheading %}Tutor Class List{% endblock %}
 
 {% block main %}
-
+<table>
+    <tr>
+        <th>Name</th>
+        <th>School ID</th>
+        <th>Email</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+        <td>{{ student[3] }}, {{ student[4] }}</td>
+        <td>{{ student[2] }}</td>
+        <td>{{ student[6] }}</td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}
