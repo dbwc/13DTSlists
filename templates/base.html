@@ -8,7 +8,7 @@
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <header>
             <h1>13DTS Master Website</h1>
             <h2>{% block pageheading %}{% endblock %}</h2>
@@ -28,9 +28,6 @@
                 {%  endif %}
                 </li>
             </ul>
-
-
-
         </nav>
         <div id="main">
             {% block main %}

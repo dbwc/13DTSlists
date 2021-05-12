@@ -48,8 +48,35 @@ def render_homepage():
     return render_template('home.html', students=student_list, classes=class_list, logged_in=is_logged_in())
 
 
-@app.route('/class/<tutor_id>')
+@app.route('/class/<tutor_id>', methods=["GET", "POST"])
 def render_class(tutor_id):
+    if request.method == "POST" and is_logged_in():
+        first_name = request.form['first_name'].strip().title()
+        surname = request.form['surname'].strip().title()
+        year_level = request.form['year_level']
+        schl_id = request.form['schl_id'].strip().title()
+        email = request.form['email'].strip().lower()
+
+        if len(surname) < 2:
+            return redirect("/menu?error=Surame+must+be+at+least+2+letters+long.")
+        elif len(first_name) < 3:
+            return redirect("/menu?error=First+Name+must+be+at+least+3+letters+long.")
+        else:
+            # connect to the database
+            con = create_connection(DB_NAME)
+
+            query = "INSERT INTO students (id, year_level, schl_id, surname, first_name, tutor_id, email, editor_id) " \
+                "VALUES(NULL, ?, ?, ?, ?, ?, ?, ?)"
+
+            cur = con.cursor()  # You need this line next
+            editor_id = session['userid']
+            try:
+                cur.execute(query, (year_level, schl_id, surname, first_name, tutor_id, email, editor_id))  # this line actually executes the query
+            except:
+                return redirect('/menu?error=Unknown+error')
+
+            con.commit()
+            con.close()
     # connect to the database
     con = create_connection(DB_NAME)
     query = "SELECT id, year_level, schl_id, surname, first_name, tutor_id, email" \

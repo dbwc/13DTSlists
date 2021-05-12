@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+#container {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-areas: 'header header' 'nav main' 'footer footer';
+
+}
+
 header {
     grid-area: header;
     background-color: #064c35;
@@ -14,6 +21,7 @@ header {
 
 nav {
     grid-area: nav;
+    padding: 1rem;
 }
 
 #main {
@@ -27,4 +35,10 @@ footer {
     padding: 1rem;
     background-color: #064c35;
     color: #a4f8dc;
+}
+
+.myForm {
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid #f00;
 }

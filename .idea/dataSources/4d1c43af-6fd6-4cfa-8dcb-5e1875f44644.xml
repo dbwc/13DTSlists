@@ -1390,45 +1390,50 @@
       <Position>7</Position>
       <DataType>char(18)|0s</DataType>
     </column>
-    <key id="508" parent="172" name="students_pk">
+    <column id="508" parent="172" name="editor_id">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <key id="509" parent="172" name="students_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="509" parent="173" name="id">
+    <column id="510" parent="173" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="510" parent="173" name="class_name">
+    <column id="511" parent="173" name="class_name">
       <Position>2</Position>
       <DataType>char(5)|0s</DataType>
     </column>
-    <key id="511" parent="173" name="tutor_classes_pk">
+    <key id="512" parent="173" name="tutor_classes_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="512" parent="174" name="id">
+    <column id="513" parent="174" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="513" parent="174" name="fname">
+    <column id="514" parent="174" name="fname">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <column id="514" parent="174" name="lname">
+    <column id="515" parent="174" name="lname">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <column id="515" parent="174" name="email">
+    <column id="516" parent="174" name="email">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="516" parent="174" name="password">
+    <column id="517" parent="174" name="password">
       <Position>5</Position>
       <DataType>char(60)|0s</DataType>
     </column>
-    <key id="517" parent="174" name="users_pk">
+    <key id="518" parent="174" name="users_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
